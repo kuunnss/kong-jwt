@@ -14,4 +14,13 @@ payload中参数可通过claims取
 ```
   kong.service.request.set_raw_query(kong.request.get_raw_query() .. "&userid=" .. userid) 
 ```
+
+如有需要过滤jwt参数
+```
+  for k, v in pairs(kong.request.get_query()) do
+    if(k ~= "jwt") then str = str .. k .. "=" .. v .. "&"
+      end
+  end
+```
+
 通过kong api拼接在url后面带给业务系统  
