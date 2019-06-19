@@ -6,9 +6,12 @@
 handler.lua jwt核心组件  
 
 ``  
-  local claims = jwt.claims  
+  local claims = jwt.claims 
+``  
   local header = jwt.header  
+``  
   local jwt_secret_key = claims[conf.key_claim_name] or header[conf.key_claim_name]  
+``  
   local userid = claims["userid"] or header["userid"]  
 ``  
 payload中参数可通过claims取  
