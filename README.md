@@ -1,7 +1,8 @@
 # 实现Kong jwt检验后将相关参数转发给业务系统 
 
 ## kong jwt 插件目录  
-/usr/local/Cellar/kong/1.2.0/share/lua/5.1/kong/plugins/jwt  
+ubuntu   /usr/local/Cellar/kong/1.2.0/share/lua/5.1/kong/plugins/jwt  
+centos   /usr/local/share/lua/5.1/kong/plugins/jwt
 handler.lua jwt核心组件  
 
 ```
